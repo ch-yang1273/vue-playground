@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: 'IconDocumentation'
+}
+</script>
+
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" fill="currentColor">
     <path
