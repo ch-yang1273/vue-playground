@@ -16,6 +16,7 @@ export default [
     rules: {
       // 사용하지 않는 변수 경고
       'no-unused-vars': 'warn',
+      'vue/no-unused-vars': 'warn', /* vue 템플릿의 변수 사용을 감지 */
 
       // console.log 경고 (프로덕션에서 제거 권장)
       'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
