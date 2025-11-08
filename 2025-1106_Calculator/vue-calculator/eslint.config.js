@@ -10,12 +10,6 @@ export default [
 
   {
     rules: {
-      // 세미콜론 강제
-      'semi': ['error', 'always'],
-
-      // 싱글 쿼트 사용
-      'quotes': ['error', 'single'],
-
       // 사용하지 않는 변수 경고
       'no-unused-vars': 'warn',
 
