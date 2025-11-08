@@ -1,7 +1,11 @@
+import js from '@eslint/js';
 import pluginVue from 'eslint-plugin-vue';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 export default [
+  // JavaScript 기본 권장 설정
+  js.configs.recommended,
+
   // Vue 권장 설정
   ...pluginVue.configs['flat/recommended'],
 
