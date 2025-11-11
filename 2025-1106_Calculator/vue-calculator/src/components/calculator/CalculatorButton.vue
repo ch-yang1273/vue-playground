@@ -22,9 +22,10 @@ const handleClick = () => {
 };
 
 const buttonClasses = computed(() => {
-  const baseClasses =
-    'rounded-lg px-6 py-6 text-2xl font-medium transition-all duration-200 ' +
-    'hover:-translate-y-0.5 active:translate-y-0 flex-1';
+  const baseClasses = [
+    'rounded-lg px-6 py-6 text-2xl font-medium transition-all duration-200',
+    'hover:-translate-y-0.5 active:translate-y-0 flex-1',
+  ].join(' ');
 
   const typeClasses = {
     number: 'bg-[#3a3a3a] text-white hover:bg-[#4a4a4a]',

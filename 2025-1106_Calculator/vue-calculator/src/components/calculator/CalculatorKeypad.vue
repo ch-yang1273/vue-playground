@@ -23,8 +23,8 @@ const buttonRows = [
   [
     { label: 'C', type: 'clear' },
     { label: '0', type: 'number' },
-    { label: '=', type: 'operator' },
-    { label: '?', type: 'operator' },
+    { label: '=', type: 'equals' },
+    { label: '.', type: 'operator' },
   ],
 ];
 </script>

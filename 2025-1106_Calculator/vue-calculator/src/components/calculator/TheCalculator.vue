@@ -4,8 +4,10 @@ import CalculatorDisplay from './CalculatorDisplay.vue';
 </script>
 
 <template>
-  <CalculatorDisplay />
-  <CalculatorKeypad />
+  <div class="flex flex-col">
+    <CalculatorDisplay />
+    <CalculatorKeypad />
+  </div>
 </template>
 
 <style scoped></style>
