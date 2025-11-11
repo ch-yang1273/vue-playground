@@ -1,5 +1,5 @@
 <script setup>
-import CalculatorButton from './components/calculator/CalculatorButton.vue';
+import TheCalculator from './components/calculator/TheCalculator.vue';
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import CalculatorButton from './components/calculator/CalculatorButton.vue';
     <div
       class="flex flex-row items-stretch gap-7 rounded-xl bg-neutral-800 p-5 shadow-2xl"
     >
-      <CalculatorButton label="텍스트" />
+      <TheCalculator />
     </div>
   </div>
 </template>
