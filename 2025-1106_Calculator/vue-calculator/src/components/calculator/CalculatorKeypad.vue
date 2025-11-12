@@ -12,21 +12,28 @@ const buttonRows = [
     { label: '4', type: 'number' },
     { label: '5', type: 'number' },
     { label: '6', type: 'number' },
-    { label: 'x', type: 'operator' },
+    { label: '-', type: 'operator' },
   ],
   [
     { label: '1', type: 'number' },
     { label: '2', type: 'number' },
     { label: '3', type: 'number' },
-    { label: '-', type: 'operator' },
+    { label: 'x', type: 'operator' },
   ],
   [
     { label: 'C', type: 'clear' },
     { label: '0', type: 'number' },
     { label: '=', type: 'equals' },
-    { label: '.', type: 'operator' },
+    { label: '/', type: 'operator' },
   ],
 ];
+
+const emit = defineEmits(['click']);
+
+const handleButtonClick = (label, type) => {
+  console.log('Keypad', label, type);
+  emit('click', label, type);
+};
 </script>
 
 <template>
@@ -41,6 +48,7 @@ const buttonRows = [
         v-bind:key="button.label"
         v-bind:label="button.label"
         v-bind:type="button.type"
+        v-on:click="handleButtonClick"
       />
     </div>
   </div>

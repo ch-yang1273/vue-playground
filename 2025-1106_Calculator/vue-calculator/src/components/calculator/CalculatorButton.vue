@@ -17,8 +17,8 @@ const props = defineProps({
 const emit = defineEmits(['click']);
 
 const handleClick = () => {
-  console.debug('Button clicked', props.label);
-  emit('click', props.label);
+  console.log('Button', props.label);
+  emit('click', props.label, props.type);
 };
 
 const buttonClasses = computed(() => {
