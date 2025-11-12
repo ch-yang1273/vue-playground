@@ -62,9 +62,12 @@ const calculate = (firstNumber, secondNumber, operator) => {
     case 'x':
       return String(Number(firstNumber) * Number(secondNumber));
     case '/':
+      if (secondNumber === '0') {
+        return '0';
+      }
       return String(Number(firstNumber) / Number(secondNumber));
     case '':
-      return displayNumber.value;
+      return secondNumber;
   }
 };
 </script>
