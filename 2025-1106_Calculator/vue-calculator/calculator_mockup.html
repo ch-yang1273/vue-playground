@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator with GitHub Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            background-color: #1e1e1e;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        /* GitHub Profile Styles */
+        .github-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            min-width: 200px;
+        }
+
+        .profile-image {
+            margin-bottom: 20px;
+        }
+
+        .profile-image img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #444;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            text-align: center;
+        }
+
+        .username {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Calculator Styles */
+        .calculator {
+            padding: 0;
+            width: 320px;
+        }
+
+        .display {
+            background-color: #2d2d2d;
+            color: #ffffff;
+            font-size: 36px;
+            text-align: right;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-weight: 300;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .btn {
+            background-color: #3a3a3a;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 24px;
+            padding: 25px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .btn:hover {
+            background-color: #4a4a4a;
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn.operator {
+            background-color: #ff9500;
+            color: #ffffff;
+        }
+
+        .btn.operator:hover {
+            background-color: #ffaa33;
+        }
+
+        .btn.clear {
+            background-color: #505050;
+        }
+
+        .btn.clear:hover {
+            background-color: #606060;
+        }
+
+        .btn.equals {
+            background-color: #ff9500;
+            color: #ffffff;
+        }
+
+        .btn.equals:hover {
+            background-color: #ffaa33;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- GitHub Profile Section -->
+        <div class="github-profile">
+            <div class="profile-image">
+                <img src="https://avatars.githubusercontent.com/u/9919?v=4" alt="Profile">
+            </div>
+            <div class="profile-info">
+                <h2 class="username">octocat</h2>
+            </div>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="calculator">
+            <div class="display">0</div>
+            <div class="buttons">
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn operator">÷</button>
+                
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn operator">×</button>
+                
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn operator">-</button>
+                
+                <button class="btn clear">C</button>
+                <button class="btn">0</button>
+                <button class="btn equals">=</button>
+                <button class="btn operator">+</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
