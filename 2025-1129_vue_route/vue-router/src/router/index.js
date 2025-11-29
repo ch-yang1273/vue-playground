@@ -11,7 +11,10 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: AboutView
+    component: AboutView,
+    props: (route) => ({
+      aboutId: route.query.id || ""
+    })
   },
 ]
 
