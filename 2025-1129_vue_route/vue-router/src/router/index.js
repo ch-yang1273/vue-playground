@@ -1,5 +1,7 @@
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
+import LoginView from "../views/LoginView.vue";
+import PizzaView from "../views/PizzaView.vue";
 import {createRouter, createWebHistory} from "vue-router";
 
 const routes = [
@@ -19,7 +21,12 @@ const routes = [
   {
     path: '/pizza',
     name: 'pizza',
-    component: HomeView
+    component: PizzaView
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView
   },
 ]
 
@@ -38,5 +45,12 @@ router.beforeEach((to, from, next) => {
     next({name: 'home'});
   } else {
     next();
+  }
+});
+
+router.afterEach((to, from, next) => {
+  document.title = to.name;
+  if (to.name === 'login') {
+    user.isAuthenticated = true;
   }
 })

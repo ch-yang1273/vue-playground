@@ -3,7 +3,8 @@
 </script>
 
 <template>
-  <h1>HomeView</h1>
+  <h1>LoginView</h1>
+  <p>Login successful!</p>
 </template>
 
 <style scoped>
