@@ -21,7 +21,14 @@ const routes = [
   {
     path: '/pizza',
     name: 'pizza',
-    component: PizzaView
+    component: PizzaView,
+    beforeEnter: async (to, from, next) => {
+      if (!user.isAuthenticated) {
+        next({name: 'home'});
+      } else {
+        next();
+      }
+    }
   },
   {
     path: '/login',
@@ -38,15 +45,6 @@ export const router = createRouter({
 const user = {
   isAuthenticated: false,
 }
-
-router.beforeEach((to, from, next) => {
-  if (to.name === 'pizza' && !user.isAuthenticated) {
-    console.log('Not authenticated. Go to home');
-    next({name: 'home'});
-  } else {
-    next();
-  }
-});
 
 router.afterEach((to, from, next) => {
   document.title = to.name;
