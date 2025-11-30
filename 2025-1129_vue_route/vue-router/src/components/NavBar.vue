@@ -7,6 +7,7 @@ import {RouterLink} from "vue-router";
     <RouterLink :to="{name: 'home'}">Home</RouterLink>
     <RouterLink :to="{name: 'about', query: {id: 1}}">About_1</RouterLink>
     <RouterLink :to="{name: 'about', query: {id: 2}}">About_2</RouterLink>
+    <RouterLink :to="{name: 'pizza'}">Pizza</RouterLink>
   </nav>
 </template>
 
