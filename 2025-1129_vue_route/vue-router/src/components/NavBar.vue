@@ -9,6 +9,7 @@ import {RouterLink} from "vue-router";
     <RouterLink :to="{name: 'about', query: {id: 2}}">About_2</RouterLink>
     <RouterLink :to="{name: 'pizza'}">Pizza</RouterLink>
     <RouterLink :to="{name: 'login'}">Login</RouterLink>
+    <RouterLink :to="{name: 'leave'}">Leave</RouterLink>
   </nav>
 </template>
 
